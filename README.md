@@ -1,1 +1,1 @@
-Empty repository for managing tickets for remaining work on the next update to www.inquisitionspostmortem.ac.uk
+Contains static person and juror indexes for next udpate to www.inquisitionspostmortem.ac.uk and is used for managing other issues 
