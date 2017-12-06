@@ -1,14 +1,73 @@
-<html>
+{% extends "base.html" %}
+{% load mezzanine_tags keyword_tags stringtags %}
+{% block meta_title %}Index Vol 21 {% endblock %}
+{% block meta_keywords %}{% metablock %}
+{% keywords_for page as keywords %}
+{% for keyword in keywords %}
+{% if not forloop.first %}, {% endif %}
+{{ keyword }}
+{% endfor %}
+{% endmetablock %}{% endblock %}
+{% block meta_description %}{% metablock %}
+{{ page.description }}
+{% endmetablock %}{% endblock %}
+{% block title %}
+Index Vol. 21
+{% endblock %}
+{% block main %}
+
+
+<div class="content-section">
+   <div class="row page-header">
+      <div class="large-12 columns">
+         <ul class="breadcrumbs">
+            <li>
+               <a href="/">Home</a>
+            </li>
+            <li>
+               <a href="/browse/">Browse</a>
+            </li>
+            <li>
+               <a href="/browse/inquisitions/">Inquisitions</a>
+            </li>
+            <li>
+               <a href="/view/inquisition/{{ inquisition }}">Inquisition {{ inquisition }}</a>
+            </li>
+         </ul>
+      </div>
+   </div>
    
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <div class="row">
+      <div class="large-2 columns content-anchor">
+         <nav class="local">
+            <ul class="side-nav">
+               <li>
+                  <h4>Browse</h4>
+               </li>
+               <li>
+                  <a href="/browse/people/">People</a>
+               </li>
+               <li>
+                  <a href="/browse/places/">Places</a>
+               </li>
+               <li>
+                  <a href="/browse/inquisitions/">Inquisitions</a>
+               </li>
+            </ul>
+         </nav>
+      </div>
       
-      
-      <title>Index of Jurors - ... , A</title>
-      
-   </head>
+      <!-- end side nav -->
+      <!-- Content starts here -->
+      <div id="main-content" class="large-9 columns main-content">
    
-   <body>
+      <h2>Index of Jurors - ... , A</h2>
+      
+      
+      
+   
+   
+   
       <!-- add .., Christopher -->
       <p class="zero">..., ..., of Brixworth, junior, Northamptonshire (1420), 
          <a href="/view/inquisition/21-653/668">21-668</a>
@@ -14297,6 +14356,6 @@
          
       </p>
       
-   </body>
-   
-</html>
+   </div>
+   </div>
+</div>
